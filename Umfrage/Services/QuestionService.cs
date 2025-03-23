@@ -21,7 +21,7 @@ namespace Umfrage.Services
 
         public List<Questions> GetQuestionsForSchoolClass(string schoolClass)
         {
-            return _context.Questions.AsNoTracking().Where(q => q.SelectedClass == schoolClass).ToList();
+            return _context.Questions.AsNoTracking().Where(q => q.SelectedClass == schoolClass || q.SelectedClass == "0").ToList();
         }
 
         public Questions? CreateQuestion(QuestionDTO newQuestion)

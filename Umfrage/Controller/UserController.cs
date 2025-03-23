@@ -11,15 +11,18 @@ namespace Umfrage.Controller
     {
         private readonly UserService _userService;
 
+
         public UserController(UserService userService)
         {
             _userService = userService;
+
         }
 
         [HttpGet("all")]
         public ActionResult<List<UserDTO>> GetAllUser()
         {
             var users = _userService.AllUser().Select(ToUserDTO).ToList();
+
             return Ok(users);
         }
 

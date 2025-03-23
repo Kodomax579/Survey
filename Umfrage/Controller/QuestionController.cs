@@ -16,13 +16,6 @@ namespace Umfrage.Controller
             _questionService = questionService;
         }
 
-        [HttpGet("questions/all")]
-        public ActionResult<List<QuestionDTO>> GetAllQuestions()
-        {
-            var questions = _questionService.AllQuestions().Select(ToQuestionDTO).ToList();
-            return Ok(questions);
-        }
-
         [HttpGet("questions/{schoolClass}")]
         public ActionResult<List<QuestionDTO>> QuestionsForSchoolClass(string schoolClass)
         {
