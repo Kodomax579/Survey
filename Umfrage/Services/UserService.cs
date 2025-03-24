@@ -32,7 +32,7 @@ namespace Umfrage.Services
                 Email = newUser.Email,
                 Password = newUser.Password,
                 Schoolclass = newUser.Schoolclass,
-                role = 0
+                role = (Role)1
             };
             _context.User.Add(user);
             return _context.SaveChanges() > 0;

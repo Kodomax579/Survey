@@ -65,7 +65,8 @@ namespace Umfrage.Controller
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Email = user.Email,
-                Schoolclass = user.Schoolclass
+                Schoolclass = user.Schoolclass,
+                role = user.role
             };
         }
     }
